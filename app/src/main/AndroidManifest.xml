@@ -52,7 +52,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".VideoActivity"></activity>
+        <activity android:name=".VideoActivity"/>
+        <activity android:name=".BotActivity"/>
     </application>
 
 </manifest>
