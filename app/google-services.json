@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "625225823191",
+    "firebase_url": "https://lawapp-246ec.firebaseio.com",
+    "project_id": "lawapp-246ec",
+    "storage_bucket": "lawapp-246ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625225823191:android:dbffabcb91f5ac8a",
+        "android_client_info": {
+          "package_name": "com.example.franko.law"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625225823191-5vjcaoohvjnn6aq0qbsgvr469iqo1dl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm6Ek52sS8we2xelApTN5hYQt_xIc9Dh0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

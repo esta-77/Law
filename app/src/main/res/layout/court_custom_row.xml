@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_marginLeft="5sp"
+    android:layout_marginRight="5sp"
+    android:layout_marginEnd="5sp"
+    android:layout_marginStart="5sp"
+    android:layout_marginBottom="30dp"
+    android:layout_marginTop="5sp"
+    android:id="@+id/court_custom_row_holder"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_centerVertical="true"
+            android:id="@+id/court_custom_row_image"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:alpha="0.3"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/black_background"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Supreme Court"
+            android:textColor="#FFF"
+            android:layout_marginLeft="5sp"
+            android:lineSpacingExtra="2.5dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:id="@+id/court_custom_row_name"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:textSize="18dp"
+            />
+
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toRightOf="@id/court_custom_row_image"-->
+            <!--android:orientation="vertical"-->
+            <!--&gt;-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="17sp"-->
+                <!--android:text="Supreme Court"-->
+                <!--android:textStyle="bold"-->
+                <!--android:id="@+id/court_custom_heading"-->
+                <!--android:textColor="#000"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="13sp"-->
+                <!--android:id="@+id/court_custom_description"-->
+                <!--android:text="hey there my name is smitb sese amoah and i and a beast people call me beast buh i think they are correct am a mother fucking beast"-->
+                <!--android:textStyle="normal"-->
+                <!--/>-->
+
+
+        <!--</LinearLayout>-->
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
