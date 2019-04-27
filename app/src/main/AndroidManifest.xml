@@ -54,6 +54,8 @@
         </activity>
         <activity android:name=".VideoActivity"/>
         <activity android:name=".BotActivity"/>
+        <activity android:name=".CourtBo_Activity"/>
+        <activity android:name=".LawDroid_Activity"/>
     </application>
 
 </manifest>

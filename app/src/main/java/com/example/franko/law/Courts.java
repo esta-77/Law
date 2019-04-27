@@ -58,7 +58,7 @@ public class Courts extends android.support.v4.app.Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), BotActivity.class));
+                startActivity(new Intent(getActivity(), CourtBo_Activity.class));
             }
         });
 
@@ -136,6 +136,8 @@ public class Courts extends android.support.v4.app.Fragment {
             intent.putExtra("MODEL_NAME",model.getName());
             intent.putExtra("MODEL_DESCRIPTION",model.getDescription());
             intent.putExtra("MODEL_IMAGE_URL",model.getImageUrl());
+            intent.putExtra("MODEL_CASES_HANDLED",model.getCases_handled());
+            intent.putExtra("MODEL_REWARDS", model.getRewards());
             startActivity(intent);
         }
     };

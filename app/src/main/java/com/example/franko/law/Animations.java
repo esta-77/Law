@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -58,8 +59,15 @@ public class Animations extends android.support.v4.app.Fragment {
         return rootView;
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle(getString(R.string.animation));
+    }
+
     private void populateList() {
         list.add(new Videos("https://firebasestorage.googleapis.com/v0/b/lawapp-246ec.appspot.com/o/VID-20190130-WA0003.mp4?alt=media&token=18f7689f-efe7-4c36-a769-a22f0fe6373e","","Rubber dump correction",""));
+        list.add(new Videos("https://firebasestorage.googleapis.com/v0/b/lawapp-246ec.appspot.com/o/esther.wmv?alt=media&token=0ce56c52-2690-4e78-8761-1b59b180bed2", "", "Intestate Law", ""));
         adapter.notifyDataSetChanged();
     }
 

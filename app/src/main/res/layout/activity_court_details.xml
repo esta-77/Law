@@ -28,33 +28,144 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context=".CourtDetails">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:id="@+id/court_details_image"
-            android:src="@mipmap/ic_launcher"
-            android:scaleType="centerCrop"
-            android:layout_margin="5dp"
-            />
-
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_below="@id/court_details_image"
-            android:padding="15dp"
-            >
+            android:layout_height="wrap_content"
+            android:id="@+id/image_holder">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/court_details_text"
-                android:textSize="18dp"
-                android:lineSpacingExtra="2dp"
-                android:padding="5dp"
-                android:text="Description"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:id="@+id/court_details_image"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+
                 />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Supreme Court"
+                    android:textColor="@color/solid_color"
+                    android:layout_marginLeft="5sp"
+                    android:lineSpacingExtra="2.5dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:id="@+id/court_custom_row_name"
+                    android:layout_marginBottom="0dp"
+                    android:textSize="19dp"
+                    android:layout_marginTop="160dp"
+                    />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/image_holder">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/icon_group"
+                    android:background="@color/gray"
+                    android:id="@+id/divider_1"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/divider_1"
+                    android:id="@+id/cases_value">
+
+
+                    <TextView
+                        android:id="@+id/court_description_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="2dp"
+                        android:padding="5dp"
+                        android:text="Description"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/court_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Here is a description about "
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/court_cases_handled_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:lineSpacingExtra="2dp"
+                        android:padding="5dp"
+                        android:text="Cases Handled"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/court_cases_handled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="the cases we handle"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:id="@+id/court_rewards_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:lineSpacingExtra="2dp"
+                        android:padding="5dp"
+                        android:text="Rewards"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/court_rewards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="8"
+                        android:textSize="17sp"/>
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+        </ScrollView>
         </android.support.v7.widget.CardView>
 
     </RelativeLayout>

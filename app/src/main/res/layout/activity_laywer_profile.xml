@@ -168,12 +168,25 @@
           android:layout_marginBottom="15dp"/>
 
       <TextView
+          android:id="@+id/workplace"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:textColor="@color/black"
+          android:text="Laurel &amp; Laurel firms"
+          android:paddingBottom="10dp"
+          android:layout_below="@id/divider_2"
+          android:paddingTop="5dp"
+          android:textStyle="italic"
+          android:textSize="18dp"/>
+
+      <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:gravity="center"
           android:paddingLeft="20dp"
           android:paddingRight="20dp"
-          android:layout_below="@id/divider_2"
+          android:layout_below="@id/workplace"
           android:text="@string/desc"
           android:id="@+id/description"
           android:textColor="@color/black"

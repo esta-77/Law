@@ -10,10 +10,22 @@ public class Search {
     @SerializedName("description")
     String description;
 
+    @SerializedName("action")
+    String action;
 
-    public Search(String title, String description) {
+
+    public Search(String title, String description,String action) {
         this.title = title;
         this.description = description;
+        this.action = action;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
     }
 
     public String getTitle() {

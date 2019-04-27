@@ -3,7 +3,7 @@ package com.example.franko.law.Models;
 public class AgencyModel {
     Integer _id;
     String name;
-    String description;
+    String description,cases_handled;
     String contact;
     String image_url;
 
@@ -12,12 +12,13 @@ public class AgencyModel {
 
     }
 
-    public AgencyModel(Integer _id, String name, String imageUrl,String contact,String description) {
+    public AgencyModel(Integer _id, String name, String imageUrl,String contact,String description,String cases_handled) {
         this._id = _id;
         this.name = name;
         this.image_url = imageUrl;
         this.contact = contact;
         this.description = description;
+        this.cases_handled =cases_handled;
     }
     public Integer getId() {
         return _id;
@@ -59,5 +60,13 @@ public class AgencyModel {
 
     public void setContact(String contact) {
         this.contact = contact;
+    }
+
+    public String getCases_handled() {
+        return cases_handled;
+    }
+
+    public void setCases_handled(String cases_handled) {
+        this.cases_handled = cases_handled;
     }
 }

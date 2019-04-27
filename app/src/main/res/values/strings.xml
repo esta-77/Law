@@ -88,4 +88,5 @@
     <string name="password">ABCD123456</string>
     <string name="workspace">abdefg1234567890-abcdef</string>
     <string name="criminal_care">Criminal Care</string>
+    <string name="animation">Animation</string>
 </resources>

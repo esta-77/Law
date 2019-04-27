@@ -36,7 +36,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
     }
 
     public static class SearchViewHolder extends RecyclerView.ViewHolder{
-        TextView laws_searched,description,keyword;
+        TextView laws_searched,description;
         LinearLayout laws_container;
 
         public SearchViewHolder(View itemView) {
@@ -44,7 +44,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
 
             laws_searched = itemView.findViewById(R.id.law_title);
             description = itemView.findViewById(R.id.description);
-            keyword = itemView.findViewById(R.id.keyword);
+            //keyword = itemView.findViewById(R.id.keyword);
             laws_container = itemView.findViewById(R.id.laws_container);
 
         }

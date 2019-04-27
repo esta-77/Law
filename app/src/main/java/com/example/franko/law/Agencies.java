@@ -125,6 +125,7 @@ public class Agencies extends android.support.v4.app.Fragment implements CustomC
         intent.putExtra("MODEL_DESCRIPTION",model.getDescription());
         intent.putExtra("MODEL_CONTACT",model.getContact());
         intent.putExtra("MODEL_IMAGE_URL",model.getImageUrl());
+        intent.putExtra("MODEL_CASES_HANDLED",model.getCases_handled());
         startActivity(intent);
         //Toast.makeText(getActivity(), model.getName(), Toast.LENGTH_SHORT).show();
 

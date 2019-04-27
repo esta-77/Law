@@ -1,31 +1,31 @@
 package com.example.franko.law.Models;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+import com.google.gson.annotations.Expose;
+
+@IgnoreExtraProperties
+
 public class SearchModel {
-    String id;
-    String keyword;
+
+    @Expose
+    String action;
     String title;
     String description;
 
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public SearchModel(String id, String title, String description, String keyword) {
-        this.id =id;
+    public SearchModel( String title, String description, String action) {
+//        this.id =id;id
         this.title = title;
         this.description =description;
-        this.keyword = keyword;
-
-
-
+        this.action = action;
     }
 
+//    public String getId() {
+//        return id;
+//    }
 
+//    public void setId(String id) {
+//        this.id = id;
+//    }
 
     public String getTitle() {
         return title;
@@ -44,11 +44,11 @@ public class SearchModel {
         this.description = description;
     }
 
-    public String getKeyword() {
-        return keyword;
+    public String getAction() {
+        return action;
     }
 
-    public void setKeyword(String keyword) {
-        this.keyword = keyword;
+    public void setAction(String action) {
+        this.action = action;
     }
 }

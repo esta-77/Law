@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.franko.law.CustomClickListener;
 import com.example.franko.law.Models.Videos;
@@ -33,10 +34,12 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideoViewH
     public class VideoViewHolder extends RecyclerView.ViewHolder {
 
         CardView holder;
+        TextView title;
 
         public VideoViewHolder(View itemView) {
             super(itemView);
             holder = itemView.findViewById(R.id.row_videos_holder);
+            title = itemView.findViewById(R.id.title);
         }
     }
 
@@ -50,6 +53,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideoViewH
     public void onBindViewHolder(@NonNull VideoViewHolder holder, final int position) {
 
         Videos videos = list.get(position);
+        holder.title.setText(videos.getTitle());
 
         holder.holder.setOnClickListener(new View.OnClickListener() {
             @Override

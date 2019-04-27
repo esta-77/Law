@@ -20,24 +20,23 @@
             >
 
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/human_rights"
-                android:scaleType="centerCrop"
-                android:id="@+id/row_videos_image"
-                />
+            <!--<ImageView-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:src="@drawable/human_rights"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:id="@+id/row_videos_image"-->
+                <!--/>-->
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/black"
-                android:alpha="0.5"
                 />
 
             <ImageView
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="70dp"
                 android:layout_centerInParent="true"
                 android:id="@+id/row_videos_play"
                 android:src="@drawable/ic_play_circle_outline_black_24dp"
@@ -62,26 +61,26 @@
                 android:textStyle="bold"
                 android:maxLines="2"
                 android:lines="2"
+                android:gravity="center"
+                android:id="@+id/title"
                 android:textSize="18dp"
                 android:textColor="@color/black"
                 android:layout_margin="10dp"
                 />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:text="Child Abuse"
-                android:textStyle="bold"
-                />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="Child Abuse"-->
+                <!--android:textStyle="bold"-->
+                <!--/>-->
 
 
 
 
         </LinearLayout>
-
-
 
 
 

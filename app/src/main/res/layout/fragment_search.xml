@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".SearchFragment">
 
     <RelativeLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
-
-
-
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="55dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/lawdroidimages"
+            android:paddingBottom="10dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_below="@+id/logo"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:hint="Search"
-            android:textColorHint="@color/white"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
             android:padding="10dp"
             android:drawablePadding="10dp"
             android:background="@drawable/round_corners"
@@ -40,11 +50,21 @@
             android:layout_centerHorizontal="true"
             android:text="Search"
             android:textColor="#fff"
-            android:background="#4353"
+            android:background="@color/colorPrimary"
             android:layout_margin="10dp"
             />
 
 
     </RelativeLayout>
 
-</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_chat"
+        tools:ignore="VectorDrawableCompat" />
+
+
+</android.support.design.widget.CoordinatorLayout>

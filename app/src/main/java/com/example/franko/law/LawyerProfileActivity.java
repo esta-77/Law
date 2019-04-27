@@ -52,12 +52,14 @@ public class LawyerProfileActivity extends AppCompatActivity {
         telephone = findViewById(R.id.call);
         message = findViewById(R.id.message);
         lawyer_photo = findViewById(R.id.lawyer_image);
+        place_of_work = findViewById(R.id.workplace);
 
         name.setText(bundle.getString("name"));
         total_cases.setText(bundle.getString("cases"));
         lost_cases.setText(bundle.getString("cases_lost"));
         won_cases.setText(bundle.getString("cases_won"));
         desc.setText(bundle.getString("desc"));
+        place_of_work.setText(bundle.getString("workplace"));
         Glide.with(LawyerProfileActivity.this).load(bundle.getString("image")).into(lawyer_photo);
 
 

@@ -20,6 +20,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -100,31 +101,18 @@ public class LawyerCategory extends AppCompatActivity {
     private void populateList() {
         final String key = getIntent().getStringExtra("MODEL_ID");
         System.out.println("key "+key);
-        reference.addChildEventListener(new ChildEventListener() {
+        reference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                HashMap<String, Object> item = (HashMap<String, Object>) dataSnapshot.getValue();
-                System.out.println(dataSnapshot.getValue());
-                if(key.equals(String.valueOf(item.get("lawyer_group_id")))) {
-                    lawyers.add(new LawyerModel(String.valueOf(item.get("lawyer_group_id")), String.valueOf(item.get("contact")), String.valueOf(item.get("imageUrl")), String.valueOf(item.get("workplace")), String.valueOf(item.get("name")), String.valueOf(item.get("cases_won")), String.valueOf(item.get("cases_lost")), String.valueOf(item.get("cases_number")),String.valueOf(item.get("description"))));
-                    adapter.notifyDataSetChanged();
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                lawyers.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    HashMap<String, Object> item = (HashMap<String, Object>) snapshot.getValue();
+                    if(key.equals(String.valueOf(item.get("lawyer_group_id")))) {
+                        lawyers.add(new LawyerModel(String.valueOf(item.get("lawyer_group_id")), String.valueOf(item.get("contact")), String.valueOf(item.get("imageUrl")), String.valueOf(item.get("workplace")), String.valueOf(item.get("name")), String.valueOf(item.get("cases_won")), String.valueOf(item.get("cases_lost")), String.valueOf(item.get("cases_number")),String.valueOf(item.get("description"))));
+                        adapter.notifyDataSetChanged();
+                    }
                 }
-
-            }
-
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
+                adapter.notifyDataSetChanged();
             }
 
             @Override
@@ -132,6 +120,9 @@ public class LawyerCategory extends AppCompatActivity {
 
             }
         });
+
+
+
     }
 
 

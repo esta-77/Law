@@ -1,11 +1,14 @@
 package com.example.franko.law;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.franko.law.Models.Search;
@@ -60,7 +63,13 @@ public class SearchActivity extends AppCompatActivity {
 
             Search search = list.get(position);
 
-            Toast.makeText(SearchActivity.this,"Am tapped on position :"+position,Toast.LENGTH_SHORT).show();
+           // Toast.makeText(SearchActivity.this,"Am tapped on position :"+position,Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(SearchActivity.this,SearchDetails.class);
+            intent.putExtra("MODEL_ID","1");
+            intent.putExtra("MODEL_TITLE",search.getTitle());
+            intent.putExtra("MODEL_DESCRIPTION",search.getDescription());
+           intent.putExtra("MODEL_ACTION",search.getAction());
+            startActivity(intent);
 
         }
     };

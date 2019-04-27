@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -57,6 +58,14 @@ public class SearchFragment extends android.support.v4.app.Fragment {
 
         searchtext = (EditText) view.findViewById(R.id.fragment_search_text);
         searchbox = (Button) view.findViewById(R.id.search_button);
+
+        FloatingActionButton fab = view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), LawDroid_Activity.class));
+            }
+        });
 
         // when the search button is clicked initially to begin search through the laws
         searchbox.setOnClickListener(new View.OnClickListener() {
